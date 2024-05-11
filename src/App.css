@@ -1,0 +1,884 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar
+{
+    width: 0;
+}
+
+@font-face {
+    font-display: optional;
+    font-family: Netflix Sans;
+    font-weight: 100;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format("woff2"),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format("woff")
+}
+
+@font-face {
+    font-display: optional;
+    font-family: Netflix Sans;
+    font-weight: 300;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format("woff2"),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format("woff")
+}
+
+@font-face {
+    font-display: optional;
+    font-family: Netflix Sans;
+    font-weight: 400;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format("woff2"),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format("woff")
+}
+
+@font-face {
+    font-display: optional;
+    font-family: Netflix Sans;
+    font-weight: 500;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format("woff2"),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format("woff")
+}
+
+@font-face {
+    font-display: optional;
+    font-family: Netflix Sans;
+    font-weight: 700;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2) format("woff2"),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff) format("woff")
+}
+
+@font-face {
+    font-display: optional;
+    font-family: Netflix Sans;
+    font-weight: 900;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2) format("woff2"),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format("woff")
+}
+body 
+{
+    /* background: black; */
+}
+
+nav 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+nav .inner 
+{
+    width: 95%;
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .inner .left .logo 
+{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+nav .inner .left .logo svg 
+{
+    width: 9.25rem;
+}
+
+
+nav .inner .right .links ul 
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav .inner .right .links ul li 
+{
+    margin-left: 15px;
+}
+nav .inner .right .links ul li select
+{
+    background: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: Netflix Sans;
+    font-weight: 500;
+    letter-spacing: .5px;
+    outline: none;
+}
+nav .inner .right .links ul li select option
+{
+    color: black;
+}
+nav .inner .right .links ul li a 
+{
+    text-decoration: none;
+}
+nav .inner .right .links ul li button
+{
+    padding: 8px 16px;
+    border: .5px solid rgb(229, 9, 20);
+    background: rgb(229, 9, 20);
+    cursor: pointer;
+    border-radius: 3px;
+    color: white;
+    font-family: Netflix Sans;
+    font-weight: 500;
+    transition: .3s;
+    letter-spacing: .5px;
+}
+nav .inner .right .links ul li button:hover 
+{
+    background: rgb(200, 10, 20);
+    border: .5px solid rgb(200, 10, 20);
+    transition: .3s;
+}
+
+
+
+
+
+
+
+header
+{
+    width: 100%;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    min-height: 40rem;
+    background: url(https://assets.nflxext.com/ffe/siteui/vlv3/d253acf4-a1e2-4462-a416-f78802dc2d85/f04bf88c-f71c-4d02-82ed-adb870b8f8db/IN-en-20240429-POP_SIGNUP_TWO_WEEKS-perspective_WEB_658a042e-62cf-473d-8da0-7b875f23e2ef_small.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-bottom: 8px solid #232323;
+}
+header .banner-inner 
+{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header .banner-inner h2 
+{
+    font-size: 3rem;
+    font-family: Netflix Sans;
+    font-weight: 900;
+    text-align: center;
+}
+header .banner-inner h4 
+{
+    font-size: 1.5rem;
+    font-family: Netflix Sans;
+    font-weight: 400;
+    margin: 1rem 0 0;
+    text-align: center;
+}
+
+
+header .banner-inner h5 
+{
+    margin: 1.5rem 0 0;
+    font-size: 1.25rem;
+    font-family: Netflix Sans;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+}
+header .banner-inner .subscription 
+{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: none;
+    max-width: 550px;
+}
+header .banner-inner .subscription form 
+{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .banner-inner .subscription input 
+{
+    width: calc(100% - 150px);
+    height: 100%;
+    border: none;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.9);
+    color: gray;
+    font-family: Netflix Sans;
+    font-weight: 500;
+    min-width: 100px;
+    font-size: 16px;
+}
+header .banner-inner .subscription button
+{
+   width: 130px;
+   height: 100%;
+   border: none;
+   background: rgb(229, 9, 20);
+   cursor: pointer;
+   color: white;
+   border-radius: 6px;
+   font-family: Netflix Sans;
+   font-weight: 400;
+   font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tv_section 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: black;
+    padding: 4.5rem 0;
+
+    border-bottom: 8px solid #232323;
+}
+.tv_section .tv_inner 
+{
+    width: 95%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tv_section .tv_inner .left 
+{
+    width: 100%;
+    flex-basis: 50%;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.tv_section .tv_inner .left h3 
+{
+    font-family: Netflix Sans;
+    font-size: 30px;
+    font-weight: 900;
+}
+.tv_section .tv_inner .left p 
+{
+    font-family: Netflix Sans;
+    margin-top: 10px;
+}
+.tv_section .tv_inner .right
+{
+    flex-basis: 50%;
+}
+.tv_section .tv_inner .right .tvinner 
+{
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+}
+.tv_section .tv_inner .right .tvinner .tvvideo 
+{
+    width: 287.5px;
+    height: 162px;
+    /* background: red; */
+    position: absolute;
+    top: 61.5px;
+    left: 52px;
+    display: inline-block;
+    z-index: -1;
+    overflow: hidden;
+}
+.tv_section .tv_inner .right img 
+{
+    width: 395px;
+    z-index: 10;
+}
+.tv_section .tv_inner .right video 
+{
+    width: 100%;
+
+}
+.tv_section .tv_inner .right h3 
+{
+    font-family: Netflix Sans;
+    font-size: 30px;
+    font-weight: 900;
+}
+.tv_section .tv_inner .right p 
+{
+    font-family: Netflix Sans;
+    margin-top: 10px;
+}
+
+
+
+.tv_section .tv_inner .right .tvinner .computervideo
+{
+    position: absolute;
+    top: 32px;
+    left: 75px;
+    width: 240px;
+    height: 135.5px;
+    z-index: -1;
+}
+.tv_section.download .tv_inner .left .tvinner
+{
+    position: relative;
+}
+.tv_section.download .tv_inner .left .tvinner img 
+{
+    width: 395px;
+}
+.tv_section.download .tv_inner .right h3
+{
+    text-align: center;
+}
+
+.tv_section.download .tv_inner .left .tvinner .notedownload
+{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 260px;
+    height: 70px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    background: black;
+    border: .5px solid lightgray;
+}
+
+.tv_section.download .tv_inner .left .tvinner .notedownload .leftimage 
+{
+    width: 55px;
+    min-width: 42.5px;
+    margin-left: 7px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.tv_section.download .tv_inner .left .tvinner .notedownload .leftimage img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+.tv_section.download .tv_inner .left .tvinner .notedownload .downloadgif 
+{
+    width: 50px;
+    margin-right: 10px;
+}
+.tv_section.download .tv_inner .left .tvinner .notedownload .downloadgif img 
+{
+    width: 100%;
+}
+
+.tv_section.download .tv_inner .left .tvinner .notedownload .moviename
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.tv_section.download .tv_inner .left .tvinner .notedownload .moviename span 
+{
+    font-family: Netflix Sans;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.tv_section.download .tv_inner .left .tvinner .notedownload .moviename label 
+{
+    font-size: 0.775rem;
+    font-family: Netflix Sans;
+    font-weight: 300;
+    color: #0071eb;
+    margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.faq 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    background: black;
+    color: white;
+    border-bottom: 8px solid #232323;
+}
+.faq .faqinner 
+{
+    width: 95%;
+    max-width: 1280px;
+}
+.faq .faqinner h2 
+{
+    font-family: Netflix Sans;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+}
+.faq .faqinner .cons 
+{
+    width: 100%;
+    margin-top: 15px;
+}
+.faq .faqinner .cons .con 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    user-select: none;
+}
+.faq .faqinner .cons .con .note 
+{
+    width: 100%;
+    height: 60px;
+    background: rgb(80, 75, 75);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.faq .faqinner .cons .con .note .notetext 
+{
+    margin-left: 15px;
+    font-size: 18px;
+    font-family: Netflix Sans;
+    font-weight: 400;
+    pointer-events: none;
+}
+.faq .faqinner .cons .con .note .plusicon 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.faq .faqinner .cons .con .note .plusicon svg 
+{
+    width: 25px;
+    height: 25px;
+}
+.faq .faqinner .cons .con .note .plusicon.active svg
+{
+    transform: rotate(45deg);
+}
+
+
+
+.faq .faqinner .cons .con .hidden 
+{
+    width: calc(100% - 30px);
+    background: rgb(80, 75, 75);
+    margin-top: .5px;
+    border-radius: 2px;
+    display: none;
+    transition: .3s;
+}
+.faq .faqinner .cons .con .hidden p 
+{
+    font-size: 17px;
+    font-family: Netflix Sans;
+    font-weight: 300;
+}
+.faq .faqinner .cons .con .hidden.active 
+{
+    padding: 15px;
+    display: block;
+    transition: .3s;
+}
+
+
+.faq .faqinner .subscribe 
+{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.faq .faqinner .subscribe label 
+{
+    font-size: 1.25rem;
+    font-family: Netflix Sans;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+    text-align: center;
+}
+
+.faq .faqinner .subscribe .emailbox 
+{
+    width: 95%;
+    max-width: 550px;
+    margin-top: 20px;
+    height: 45px;
+}
+.faq .faqinner .subscribe .emailbox form 
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.faq .faqinner .subscribe .emailbox form input 
+{
+    width: calc(100% - 160px);
+    border: none;
+    height: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 3px;
+    background: #0f0f0f;
+    color: white;
+    font-size: 16px;
+    font-family: Netflix Sans;
+}
+.faq .faqinner .subscribe .emailbox form button
+{
+    width: 139px;
+    height: 100%;
+    border: none;
+    border-radius: 3px;
+    background: rgb(229, 9, 20);
+    color: white;
+    font-weight: 500;
+    font-family: Netflix Sans;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer 
+{
+    width: 100%;
+    background: black;
+    color: lightgray;
+    font-family: Netflix Sans;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+footer span 
+{
+    width: 95%;
+    max-width: 1280px;
+    margin-bottom: 15px;
+}
+footer a 
+{
+    color: #9daaaf;
+}
+footer .inner 
+{
+    width: 95%;
+    max-width: 1280px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+footer .inner .box ul 
+{
+    list-style: none;
+}
+footer .inner .box ul li
+{
+    margin-bottom: 8px;
+}
+footer .inner .box ul li a 
+{
+    color: #9daaaf;
+    font-size: 14px;
+}
+
+
+footer .language 
+{
+    width: 95%;
+    max-width: 1280px;
+    margin-top: 20px;
+}
+
+footer .language select
+{
+    padding: 6px 14px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+footer .language select option 
+{
+    color: black;
+}
+footer .language p 
+{
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1280px) {
+    nav .inner 
+    {
+        max-width: calc(83.33333333333334% - 6rem);
+    }
+    .tv_section .tv_inner {
+        max-width: calc(83.33333333333334% - 6rem);
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    nav .inner .left .logo svg
+    {
+        width: 5.5625rem;
+    }
+    nav .inner .right .links ul li
+    {
+        margin-left: 10px;
+    }
+    nav .inner .right .links ul li select 
+    {
+        padding: 6px 12px;
+    }
+    nav .inner .right .links ul li button 
+    {
+        padding: 6px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .tv_section .tv_inner .left p
+    {
+        text-align: center;
+    }
+    .tv_section.download .tv_inner 
+    {
+        flex-direction: column-reverse;
+    }
+    .tv_section.download .tv_inner .right
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tv_section.download .tv_inner .right p 
+    {
+        text-align: center;
+    }
+
+    header .banner-inner h2
+    {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    header .banner-inner h4
+    {
+        font-size: 1.125rem;
+        font-weight: 400;
+    }
+    header .banner-inner h5
+    {
+        font-size: 1.025rem;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-top: 5px;
+    }
+    .tv_section .tv_inner
+    {
+        flex-direction: column;
+    }
+    .tv_section .tv_inner .left
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq .faqinner h2
+    {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .faq .faqinner .cons .con .note .notetext
+    {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    header .banner-inner .subscription form
+    {
+        flex-direction: column;
+        height: auto;
+    }
+    header .banner-inner .subscription button
+    {
+        height: 40px;
+        margin-top: 10px;
+    }
+    header .banner-inner .subscription input
+    {
+        height: 40px;
+    }
+}
+
+
+@media screen and (min-width: 960px){
+    header
+    {
+        min-height: 43.75rem;
+    }
+    .tv_section .tv_inner .left h3
+    {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    .tv_section .tv_inner .left p 
+    {
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: Netflix Sans;
+    }
+
+
+    .tv_section.download .tv_inner .right h3 
+    {
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: left;
+    }
+    .tv_section.download .tv_inner .right p 
+    {
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: Netflix Sans;
+    }
+
+    .tv_section.download .tv_inner .right
+    {
+        flex-direction: column;
+        align-items: center;   
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+    .tv_section .tv_inner .right img
+    {
+        width: 250px;
+    }
+    .tv_section .tv_inner .right .tvinner .tvvideo
+    {
+        width: 182px;
+        height: 102.5px;
+        top: 39.5px;
+        left: 33px;
+    }
+    .tv_section .tv_inner .right .tvinner .computervideo
+    {
+        top: 13.2px;
+        left: 47px;
+        height: 92.5px;
+        width: 153px;
+    }
+}
+
+
